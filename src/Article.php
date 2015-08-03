@@ -9,8 +9,13 @@ class Article
     /** @var string */
     var $name;
 
+    /** @var string */
+    var $data;
+
     public function __construct($data)
     {
+        $this->data = $data;
+
         preg_match('/(?=\{Infobox)(\{([^{}]|(?1))*\})/s', $data, $infobox);
         if ($infobox) {
             $lines = explode("\n", $infobox[0]);
