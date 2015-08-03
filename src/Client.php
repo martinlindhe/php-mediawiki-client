@@ -80,7 +80,7 @@ class Client
         return null;
     }
 
-    private static function stripMediawikiLinks($s)
+    public static function stripMediawikiLinks($s)
     {
         $s = str_replace('[', '', $s);
         $s = str_replace(']', '', $s);
